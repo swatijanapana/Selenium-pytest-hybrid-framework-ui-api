@@ -1,5 +1,3 @@
-# Selenium Pytest Hybrid Automation Framework 
-
 # Selenium Pytest Hybrid Automation Framework
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
@@ -9,9 +7,16 @@
 
 A scalable UI automation framework built using Python, Selenium, and Pytest following the Page Object Model (POM) design pattern with data-driven testing and Allure reporting.
 
+## Table of Contents
+
+- Tech Stack
+- Framework Highlights
+- Project Structure
+- Test Reporting (Allure)
+- Running Tests
+- Example Test Scenarios
 
 ##  ⚙️ Tech Stack
-
 
 ### Core Tools:
 - Python 3.11
@@ -54,8 +59,6 @@ Selenium_Pytest_Hybrid
 └── README.md
 ```
 
-
-
 # 📊 Test Reporting (Allure)
 
 ![Allure Report](assets/allure-report.png)
@@ -86,7 +89,6 @@ Open the Allure report
 ```bash
 allure serve Reports/allure-results
 ```
-
 
 ##  🧪 Example Test Scenarios
 
