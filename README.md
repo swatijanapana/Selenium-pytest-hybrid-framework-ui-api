@@ -83,7 +83,7 @@ Selenium_Hybrid_Framework_Pytest
 └── README.md
 ```
 
-# 📊 Test Reporting (Allure)
+## 📊 Test Reporting (Allure)
 
 ![Allure Report](assets/allure-report.png)
 
@@ -146,7 +146,7 @@ allure serve Reports/allure-results
 	•	Dropdown selection validation
 
 
-# 👩‍💻 Author
+## 👩‍💻 Author
 
 Swati J – QA Analyst | Test Automation Engineer
 
@@ -156,4 +156,4 @@ Swati J – QA Analyst | Test Automation Engineer
 • Implemented POM architecture, data-driven testing (Excel), and Allure reporting. 
 • Experienced in API validation, database testing, and cross-browser execution.
 
-⭐ If you find this project useful, consider starring the repository.
+⭐If you find this project useful, consider starring the repository or connecting with me on LinkedIn.
