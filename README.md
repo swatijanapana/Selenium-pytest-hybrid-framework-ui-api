@@ -101,7 +101,7 @@ Features include:
 
 Clone the repository
 ```bash
-git clone https://github.com/swatijanapana/Selenium_Pytest_Hybrid.git
+git clone https://github.com/swatijanapana/Selenium_Hybrid_Framework_Pytest.git
 cd Selenium_Hybrid_Framework_Pytest
 ```
 Create and activate virtual environment
