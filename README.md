@@ -144,3 +144,16 @@ allure serve Reports/allure-results
 	•	Admin search functionality
 	•	Reset filters verification
 	•	Dropdown selection validation
+
+
+# 👩‍💻 Author
+
+Swati J – QA Analyst | Test Automation Engineer
+
+
+• 6+ years of experience in banking and financial services.
+• Designed and developed a Selenium Pytest automation framework. 
+• Implemented POM architecture, data-driven testing (Excel), and Allure reporting. 
+• Experienced in API validation, database testing, and cross-browser execution.
+
+⭐ If you find this project useful, consider starring the repository.
