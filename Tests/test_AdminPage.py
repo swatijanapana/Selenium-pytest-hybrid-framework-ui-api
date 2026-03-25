@@ -83,6 +83,14 @@ class Test_Admin(BaseTest):
         assert self.adminPage.get_userrole_selected_text() == constants.DEFAULT_DROPDOWN_TEXT
         assert self.adminPage.get_status_selected_text() == constants.DEFAULT_DROPDOWN_TEXT
 
+    def test_search_without_criteria(self):
+        """ Verify search behavior when no filters are applied. """
+        self.adminPage = self.login_and_open_admin()
+        self.adminPage.click_search_button()
+        self.adminPage.wait_for_form_loader()
+        # check at least one known username exists
+        assert self.adminPage.is_username_present_results("Admin")
+
 
 
 

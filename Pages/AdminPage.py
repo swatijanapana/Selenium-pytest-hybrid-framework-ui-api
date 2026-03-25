@@ -17,6 +17,7 @@ class AdminPage(BasePage):
     No_Record_found_message = (By.XPATH,"//span[@class='oxd-text oxd-text--span' and text()='No Records Found']")
     User_role_dropdown = (By.XPATH, "//label[text()='User Role']/following::div[1]")
     Status_dropdown = (By.XPATH,"//label[text()='Status']/following::div[1]")
+    Form_loader = (By.CLASS_NAME, "oxd-form-loader")
 
 
     """ Constructor of page class"""
@@ -96,8 +97,10 @@ class AdminPage(BasePage):
         rows = self.driver.find_elements(*self.Result_rows)
         return len(rows)
 
+    """ Wait until the page loader disappears. """
 
-
+    def wait_for_form_loader(self):
+        self.wait_for_loader_to_disappear(self.Form_loader)
 
 
 

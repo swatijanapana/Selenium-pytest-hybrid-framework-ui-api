@@ -15,7 +15,6 @@ class  Test_Login(BaseTest):
         assert self.loginPage.is_password_field_exist()
         assert self.loginPage.is_login_button_exist()
 
-
     def test_login_page_title(self):
         """ Verify login page title is displayed correctly. """
         self.loginPage = LoginPage(self.driver)
@@ -53,6 +52,22 @@ class  Test_Login(BaseTest):
         username = self.config["CREDENTIALS"]["USERNAME"]
         self.loginPage.do_login(username, "")
         assert self.loginPage.is_password_required_exist()
+
+    def test_login_blank_username_and_password(self):
+        """ Verify error message when both username and password field are blank. """
+        self.loginPage = LoginPage(self.driver)
+        self.loginPage.do_login("", "")
+        username_error = self.loginPage.get_username_required_text()
+        password_error = self.loginPage.get_password_required_text()
+        assert username_error == "Required"
+        assert password_error == "Required"
+
+    def test_login_invalid_credentials(self):
+        """Verify error message for invalid login."""
+        self.loginPage = LoginPage(self.driver)
+        self.loginPage.do_login("WrongUser","wrongpass")
+        error = self.loginPage.get_error_message()
+        assert error == "Invalid credentials"
 
 
 
