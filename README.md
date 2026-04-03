@@ -22,15 +22,16 @@ A scalable UI + API automation framework built using Python, Selenium, Pytest, a
 - Python 3.11
 - Selenium WebDriver
 - Pytest
+- Requests (API Testing)
 
 ### Framework Design:
 - Page Object Model (POM)
+- Hybrid Framework (UI + API + Integration)
 - Data Driven Testing (Excel)
 
-### Reporting:
+### Reporting & Execution:
 - Allure Reporting
-
-### Test Execution:
+- Pytest Fixtures & Markers
 - Cross Browser Testing (Chrome, Firefox, Edge)
 
 ##  🚀 Framework Highlights
@@ -39,21 +40,35 @@ A scalable UI + API automation framework built using Python, Selenium, Pytest, a
 	•	Cross-browser execution (Chrome, Firefox, Edge)
 	•	Allure reporting with test analytics
 	•	Screenshot capture during test execution
-	•	Clean project structure
+	•	Clean and modular project structure 
 	•	Pytest fixtures and parametrization
 
-## 🔗 API Testing
+## 🔗 API Testing Capabilities
 
     • Implemented API automation using Python requests and Pytest  
-    • Covered CRUD operations: GET, POST, PUT, DELETE  
+    • CRUD operations: GET, POST, PUT, DELETE  
     • Validated status codes, response structure, and data integrity  
-    • Implemented positive and negative API test scenarios  
-    • Built reusable API client layer for scalable test design  
+    • Implemented positive and negative API test scenarios
+    • Built reusable API client layer for scalable test design
+    • Dynamic test data generation (avoids duplicate failures)
+    • API + UI workflow validation (integration tests)
 
-## Framework Architecture
+## 🔄 Integration Testing (Key Differentiator)
+
+This framework supports end-to-end flows:
+
+👉 Example:
+	1.	Create user via API
+	2.	Login via UI using same credentials
+	3.	Validate user session
+
+## 🏗️ Framework Architecture
 ```
 Tests (Pytest)
 │
+├── API Tests
+├── UI Tests
+├── Integration Tests
 ▼
 Page Objects (POM)
 │
@@ -66,7 +81,7 @@ Utilities / Helpers
 └── API Client
 │
 ▼
-Selenium WebDriver
+Selenium WebDriver/Requests
 │
 ▼
 Browser (Chrome / Firefox / Edge)
@@ -78,19 +93,25 @@ Browser (Chrome / Firefox / Edge)
 Selenium_Hybrid_Framework_Pytest
 │
 ├── Pages               # Page Object classes
-├── Tests               # Test cases (UI + API)
+├── Tests
+│   ├── API                 # API test cases
+│   ├── UI                  # UI test cases
+│   ├── API_UI_Integration  # API + UI integration tests
+│   └── conftest.py         # Fixtures (driver, setup, etc.)
 ├── Utilities           # Helpers (Excel reader, config reader, file utils, API client)
-├── Constants           # UI text / default values
-├── Config              # Configuration files
+├── Constants           # Static UI/API constants
+├── Config              # Configuration files (env, URLs, credentials)
 ├── TestData            # Excel test data
 ├── TestFiles           # Files used for upload testing
 ├── Reports             # Screenshots / Allure results
 ├── assets              # Images used in README
-├── Tests/conftest.py   # Pytest fixtures
+├── venv                # Virtual environment
+├── pytest.ini          # Pytest markers configuration
 ├── requirements.txt    # Python dependencies
 ├── .gitignore          # Ignored files for Git
 └── README.md
 ```
+
 
 ## 📊 Test Reporting (Allure)
 
@@ -100,11 +121,19 @@ The framework generates interactive test reports using Allure.
 
 Features include:
 
-	•	Test execution summary
-	•	Pass / Fail statistics
-	•	Test timeline
-	•	Suite breakdown
-	•	Failure analysis
+	• Test execution summary
+	• Pass / Fail statistics
+	• Test timeline
+	• Suite breakdown
+	• Failure analysis
+
+## 🧪 Test Categorization (Pytest Markers)
+    
+
+  - `@pytest.mark.api`  
+  - `@pytest.mark.ui`  
+  - `@pytest.mark.integration`
+
 
 ## 🔧 Installation
 
@@ -130,6 +159,13 @@ Run all tests
 pytest
 ```
 
+Run specific folder:
+```bash
+pytest Tests/API
+pytest Tests/UI
+pytest Tests/API_UI_Integration
+```
+
 Run parallel execution
 ```bash
 pytest -n auto
@@ -145,7 +181,22 @@ Open the Allure report
 allure serve Reports/allure-results
 ```
 
-##  🧪 Example Test Scenarios
+### Run specific test types:
+
+Run only API tests:
+```bash
+pytest -m api -v -s
+```
+Run only UI tests:
+```bash
+pytest -m ui -v -s
+```
+Run only Integration tests:
+```bash
+pytest -m integration -v -s
+```
+
+## 🧪 Example Test Scenarios
 
 	•	Login with valid credentials
 	•	Login with invalid credentials
@@ -154,6 +205,12 @@ allure serve Reports/allure-results
 	•	Reset filters verification
 	•	Dropdown selection validation
 
+## 🚧 Future Enhancements
+
+- CI/CD integration (GitHub Actions / Jenkins)  
+- API schema validation  
+- Database validation  
+- Test retry mechanism for flaky tests  
  
 
 ## 👩‍💻 Author
