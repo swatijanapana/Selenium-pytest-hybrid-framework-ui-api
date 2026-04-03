@@ -121,13 +121,13 @@ The framework generates interactive test reports using Allure.
 
 Features include:
 
-	• Test execution summary
-	• Pass / Fail statistics
-	• Test timeline
-	• Suite breakdown
-	• Failure analysis
+	- Test execution summary
+	- Pass / Fail statistics
+    - Test timeline
+    - Suite breakdown
+    - Failure analysis
 
-“Achieved ~96% pass rate across 140+ test cases with UI, API, and integration coverage”
+  ✔️ Achieved ~96% pass rate across 140+ test cases with UI, API, and integration coverage
 
 ## 🧪 Test Categorization (Pytest Markers)
     
