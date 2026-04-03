@@ -19,6 +19,9 @@ Logs/
 Reports/allure-results/
 Reports/allure-report/
 
+# Generated upload copies
+TestFiles/sample_upload_*.txt
+
 # Mac files
 .DS_Store
 
