@@ -127,6 +127,8 @@ Features include:
 	• Suite breakdown
 	• Failure analysis
 
+“Achieved ~96% pass rate across 140+ test cases with UI, API, and integration coverage”
+
 ## 🧪 Test Categorization (Pytest Markers)
     
 
