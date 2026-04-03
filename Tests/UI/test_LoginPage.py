@@ -1,8 +1,11 @@
+import pytest
+
 import Constants.constants as constants
 from Pages.LoginPage import LoginPage
-from Tests import BaseTest
+from Tests.UI.base_test import BaseTest
 
-
+@pytest.mark.ui
+@pytest.mark.regression
 class  Test_Login(BaseTest):
 
     """ Login Page test cases. """
@@ -21,7 +24,7 @@ class  Test_Login(BaseTest):
         title = self.loginPage.get_title(constants.LOGIN_PAGE_TITLE)
         assert title == constants.LOGIN_PAGE_TITLE
 
-
+    @pytest.mark.smoke
     def test_login(self):
         """ Verify user can log in with valid credentials. """
         self.loginPage = LoginPage(self.driver)
@@ -61,6 +64,7 @@ class  Test_Login(BaseTest):
         password_error = self.loginPage.get_password_required_text()
         assert username_error == "Required"
         assert password_error == "Required"
+
 
     def test_login_invalid_credentials(self):
         """Verify error message for invalid login."""

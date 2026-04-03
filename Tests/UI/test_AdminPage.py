@@ -1,7 +1,12 @@
+import pytest
+
 from Constants import constants as constants
 from TestData.ui_test_data import ADMIN_TESTDATA
-from Tests import BaseTest
+from Tests.UI.base_test import BaseTest
 
+
+@pytest.mark.ui
+@pytest.mark.regression
 class Test_Admin(BaseTest):
 
     """ Admin Page test cases. """

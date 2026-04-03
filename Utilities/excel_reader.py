@@ -1,7 +1,7 @@
 import openpyxl
 
 def get_login_data():
-   wb = openpyxl.load_workbook("TestData/login_data.xlsx")
+   wb = openpyxl.load_workbook("TestData/test_data.xlsx")
    ws = wb["LoginData"]
 
    data = []

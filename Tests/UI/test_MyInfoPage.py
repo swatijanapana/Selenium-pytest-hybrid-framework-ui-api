@@ -1,10 +1,14 @@
 import os.path
-from Tests import BaseTest
+import pytest
+
+from Tests.UI.base_test import BaseTest
 from Constants import constants as constants
 from TestData.ui_test_data import MYINFO_TESTDATA, MYINFO_COMMENT_TESTDATA, MYINFO_CUSTOM_FIELD_TESTDATA
 from Utilities.file_utils import create_unique_file_copy
 
 
+@pytest.mark.ui
+@pytest.mark.regression
 class Test_MyInfo(BaseTest):
 
    """ MyInfo Page test cases. """
@@ -19,12 +23,15 @@ class Test_MyInfo(BaseTest):
         myinfoPage = self.login_and_open_myinfo()
         myinfoPage.click_personal_details_submenu()
         return myinfoPage
+
    def test_click_personal_details_submenu(self):
         """ Verify user can open Personal Details page from MyInfo menu. """
         self.myinfoPage = self.login_and_open_myinfo()
         header_value = self.myinfoPage.click_personal_details_submenu()
         assert self.myinfoPage.is_personal_details_page_loaded()
         assert header_value == constants.PERSONAL_DETAILS_TITLE
+
+
    def test_personal_details_form(self):
         """ Verify Personal Details form can be updated successfully. """
         self.myinfoPage = self.open_myinfo_personal_details()

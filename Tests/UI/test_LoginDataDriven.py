@@ -4,6 +4,8 @@ from Pages.LoginPage import LoginPage
 from Utilities.excel_reader import get_login_data
 
 
+@pytest.mark.ui
+@pytest.mark.regression
 @pytest.mark.parametrize("scenario,username,password,expected,expected_message", get_login_data())
 def test_login_from_excel(driver,scenario,username,password,expected,expected_message):
     """ Verify login behavior for multiple credential scenarios using Excel test data. """

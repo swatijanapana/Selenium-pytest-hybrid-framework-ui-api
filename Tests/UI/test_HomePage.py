@@ -1,7 +1,11 @@
+import pytest
+
 import Constants.constants as constants
-from Tests import BaseTest
+from Tests.UI.base_test import BaseTest
 
 
+@pytest.mark.ui
+@pytest.mark.regression
 class Test_Home(BaseTest):
 
     """ Home Page test cases. """
@@ -43,6 +47,7 @@ class Test_Home(BaseTest):
         actual_menu = self.homePage.get_menu_items_text()
         assert actual_menu == constants.HOME_MENU_ITEMS
 
+    @pytest.mark.smoke
     def test_click_admin_menu(self):
         """ Verify Admin navigation menu works correctly. """
         self.homePage = self.get_home_page()

@@ -14,4 +14,11 @@ TIMEOUTS:
   implicit_wait: 10
   explicit_wait: 20
 
-DATABASE CONNECTION :
+
+API_BASE_URL: "https://automationexercise.com"
+
+API_ENDPOINTS:
+  CREATE_ACCOUNT: "/api/createAccount"
+  DELETE_ACCOUNT: "/api/deleteAccount"
+
+
