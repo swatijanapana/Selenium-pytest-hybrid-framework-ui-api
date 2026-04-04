@@ -13,7 +13,7 @@ A scalable UI + API automation framework built using Python, Selenium, Pytest, a
 ## 📈 Key Metrics
 
 - 140+ automated test cases (UI + API + Integration)
-- ~96% pass rate across full suite execution
+- ~98.5% pass rate across full suite execution
 - Cross-browser coverage: Chrome, Firefox, Edge
 - End-to-end validation: API → UI workflows
 - Data-driven testing using Excel
@@ -138,7 +138,7 @@ Features include:
     - Suite breakdown
     - Failure analysis
 
-  ✔️ Achieved ~98% pass rate across 140+ test cases with UI, API, and integration coverage
+  ✔️ Achieved ~98.5% pass rate across 140+ test cases with UI, API, and integration coverage
 
 ## 🧪 Test Categorization (Pytest Markers)
     
