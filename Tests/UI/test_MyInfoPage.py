@@ -45,6 +45,7 @@ class Test_MyInfo(BaseTest):
         data["employee_id"] = Emp_id
         data["driver_license_number"] = DL_num
 
+
         self.myinfoPage.fill_personal_details_form(data)
         self.myinfoPage.click_save_button()
 
