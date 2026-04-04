@@ -138,7 +138,7 @@ Features include:
     - Suite breakdown
     - Failure analysis
 
-  ✔️ Achieved ~96% pass rate across 140+ test cases with UI, API, and integration coverage
+  ✔️ Achieved ~98% pass rate across 140+ test cases with UI, API, and integration coverage
 
 ## 🧪 Test Categorization (Pytest Markers)
     
@@ -219,20 +219,20 @@ pytest -m integration -v -s
 	•	Dropdown selection validation
 
 ## 🚧 Future Enhancements
-
-- CI/CD integration using GitHub Actions or Jenkins
-- API schema validation
-- Database validation
-- Retry mechanism for flaky tests 
+	
+	•   CI/CD integration using GitHub Actions or Jenkins
+    •   API schema validation
+    •   Database validation
+    •   Retry mechanism for flaky tests 
  
 
 ## 👩‍💻 Author
 
 Swati J – QA Analyst | Test Automation Engineer
-
-• 6+ years of experience in banking and financial services.
-• Designed and developed a Selenium Pytest automation framework. 
-• Implemented POM architecture, data-driven testing (Excel), and Allure reporting. 
-• Experienced in API validation, database testing, and cross-browser execution.
+	
+	• 6+ years of experience in banking and financial services.
+	• Built a scalable Selenium + Pytest automation framework using POM. 
+	• Implemented data-driven testing (Excel) and Allure reporting.
+	• Experience in API testing, database validation, and cross-browser automation.
 
 ⭐ If you find this project useful, consider starring the repository or connecting with me on LinkedIn.
