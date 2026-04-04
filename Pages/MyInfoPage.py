@@ -18,7 +18,7 @@ class MyInfoPage(BasePage):
     Lastname_input = (By.XPATH, "//input[@name ='lastName']")
     Employee_id_input = (By.XPATH, "//label[text()='Employee Id']/ancestor::div[contains(@class,'oxd-input-group')]//input")
     PD_Save_button = (By.XPATH,"//h6[normalize-space()='Personal Details']/following::button[@type='submit'][1]")
-    DL_number_input = (By.XPATH, "//label[text()=\"Driver's License Number\"]/ancestor::div[contains(@class,'oxd-input-group')]//input")
+    DL_number_input = (By.XPATH, "//label[contains(., \"Driver\")]/following::input[1]")
     Form_loader = (By.CLASS_NAME, "oxd-form-loader")
     DL_expiration_date = (By.XPATH, "//label[text()='License Expiry Date']/ancestor::div[contains(@class,'oxd-input-group')]//input")
     Nationality_dropdown = (By.XPATH, "//label[text()='Nationality']/ancestor::div[contains(@class,'oxd-input-group')]//div[contains(@class,'oxd-select-wrapper')]")
@@ -98,6 +98,8 @@ class MyInfoPage(BasePage):
 
     """Enter driver license number."""
     def enter_driver_license_number(self, dl_number):
+        element = self.driver.find_element(*self.DL_number_input)
+        self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", element)
         self.do_clear(self.DL_number_input)
         self.do_send_keys(self.DL_number_input,dl_number )
 
