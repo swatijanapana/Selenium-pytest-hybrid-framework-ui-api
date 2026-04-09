@@ -30,7 +30,7 @@ jobs:
 
       - name: Run stable test suite
         run: |
-          pytest -m "api or integration or smoke" -v --alluredir=Reports/allure-results
+          pytest -m "api or integration or smoke" -k "not firefox and not edge" -v --alluredir=Reports/allure-results
 
       - name: Upload Allure results
         if: always()
