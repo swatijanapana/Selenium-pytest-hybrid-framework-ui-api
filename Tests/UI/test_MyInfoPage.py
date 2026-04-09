@@ -70,7 +70,8 @@ class Test_MyInfo(BaseTest):
         self.myinfoPage.click_save_button()
         self.myinfoPage.refresh_page()
         self.myinfoPage.wait_for_form_loader()
-        assert  self.myinfoPage.is_personal_details_page_loaded()
+        self.myinfoPage.wait_for_visibility(self.myinfoPage.Firstname_input, 10).is_displayed()
+        assert self.myinfoPage.wait_for_visibility(self.myinfoPage.Firstname_input, 10).is_displayed()
         self.myinfoPage.click_personal_details_submenu()
         actual = self.myinfoPage.get_personal_details_values()
         assert actual["first_name"] == MYINFO_TESTDATA["first_name"]

@@ -53,6 +53,7 @@ class MyInfoPage(BasePage):
     Attachment_Save_button = (By.XPATH, "//h6[text()='Add Attachment']/following::button[@type='submit'][1]")
     Delete_selected = (By.XPATH, "//button[normalize-space()='Delete Selected']")
     Confirm_button_popup = (By.XPATH, "//button[normalize-space()='Yes, Delete']")
+    Delete_popup_window = (By.XPATH, "//div[@role='document']")
 
 
 
@@ -239,6 +240,7 @@ class MyInfoPage(BasePage):
     def is_gender_female_selected(self):
         return self.is_checked(self.Gender_radio_input_female)
 
+
     # Custom Fields Section
 
 
@@ -374,6 +376,7 @@ class MyInfoPage(BasePage):
 
     """ Confirm the delete popup message """
     def confirm_delete_popup(self):
+        self.wait_for_visibility(self.Delete_popup_window,10)
         self.do_click(self.Confirm_button_popup)
 
     """ Delete the uploaded file attachment."""

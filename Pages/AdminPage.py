@@ -14,7 +14,7 @@ class AdminPage(BasePage):
     Username_input = (By.XPATH,"//label[normalize-space()= 'Username']/following::input[1]")
     Result_table = (By.XPATH,"//div[@class='oxd-table-body']")
     Result_rows = (By.XPATH,"//div[@class='oxd-table-body']/child::div")
-    No_Record_found_message = (By.XPATH,"//span[@class='oxd-text oxd-text--span' and text()='No Records Found']")
+    No_Record_found_message = (By.XPATH,"//span[contains(normalize-space(),'No Records Found')]")
     User_role_dropdown = (By.XPATH, "//label[text()='User Role']/following::div[1]")
     Status_dropdown = (By.XPATH,"//label[text()='Status']/following::div[1]")
     Form_loader = (By.CLASS_NAME, "oxd-form-loader")
