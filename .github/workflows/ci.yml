@@ -45,5 +45,6 @@ jobs:
         if: always()
         run: allure generate Reports/allure-results -o Reports/allure-report --clean
         
-
+      - name: Debug folders
+        run: ls -R
 
