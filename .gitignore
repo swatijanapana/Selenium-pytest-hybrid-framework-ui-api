@@ -27,3 +27,6 @@ TestFiles/sample_upload_*.txt
 
 # PyCharm IDE project settings (local machine specific)
 .idea/
+
+# Driver
+Drivers/
