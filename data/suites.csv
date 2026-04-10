@@ -1,0 +1,8 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+" Verify login page core elements are visible. ","4037","test_environment_health_check[chrome]","Tests.UI","2026-04-10","passed","2026-04-10","Test_Login","test_LoginPage","",""
+"Verify home page title is displayed correctly.","2301","test_home_page_title[chrome]","Tests.UI","2026-04-10","passed","2026-04-10","Test_Home","test_HomePage","",""
+" Verify MyInfo menu navigation works correctly. ","15029","test_click_myinfo_menu[chrome]","Tests.UI","2026-04-10","passed","2026-04-10","Test_Home","test_HomePage","",""
+"","4762","test_create_account_and_login[chrome]","Tests.API_UI_Integration","2026-04-10","passed","2026-04-10","Test_API_UI_Intergration","test_API_UI_Integration","",""
+" Verify user can log in with valid credentials. ","7924","test_login[chrome]","Tests.UI","2026-04-10","passed","2026-04-10","Test_Login","test_LoginPage","",""
+" Verify Admin navigation menu works correctly. ","11048","test_click_admin_menu[chrome]","Tests.UI","2026-04-10","passed","2026-04-10","Test_Home","test_HomePage","",""
+" Verify user can be created through POST API. ","187","test_create_user","Tests.API","2026-04-10","passed","2026-04-10","Test_APIUsers","test_APIUsers","",""
