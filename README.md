@@ -244,11 +244,6 @@ pytest -m integration -v -s
 
 ## 👩‍💻 Author
 
-Swati J – QA Analyst | Test Automation Engineer
-	
-	• 6+ years of experience in banking and financial services.
-	• Built a scalable Selenium + Pytest automation framework using POM. 
-	• Implemented data-driven testing (Excel) and Allure reporting.
-	• Experience in API testing, database validation, and cross-browser automation.
+Swati J 
 
 ⭐ If you find this project useful, consider starring the repository or connecting with me on LinkedIn.
